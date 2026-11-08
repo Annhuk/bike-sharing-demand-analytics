@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Local environments and IDE files
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+.DS_Store
