@@ -1,0 +1,142 @@
+{
+  "dataset": {
+    "daily_rows": 731,
+    "hourly_rows": 17379,
+    "date_min": "2011-01-01",
+    "date_max": "2012-12-31",
+    "mean_daily_cnt": 4504.3488372093025,
+    "median_daily_cnt": 4548.0,
+    "max_daily_cnt": 8714,
+    "missing_values": 0
+  },
+  "eda": {
+    "corr_temp_cnt": 0.6274940090334915,
+    "corr_hum_cnt": -0.1006585621371548,
+    "corr_windspeed_cnt": -0.2345449974216706,
+    "best_month": 6,
+    "best_season": "fall",
+    "peak_hour": 17,
+    "top_correlations": {
+      "atemp": 0.6310656998491827,
+      "temp": 0.6274940090334915,
+      "season": 0.40610037079863526,
+      "weathersit": -0.29739123883466345,
+      "mnth": 0.2799771122192702
+    }
+  },
+  "modeling": {
+    "target": "cnt",
+    "train_rows": 584,
+    "test_rows": 147,
+    "test_start": "2012-08-07",
+    "test_end": "2012-12-31",
+    "feature_cols": [
+      "season",
+      "yr",
+      "mnth",
+      "holiday",
+      "weekday",
+      "workingday",
+      "weathersit",
+      "temp",
+      "atemp",
+      "hum",
+      "windspeed"
+    ],
+    "best_model": "Linear regression",
+    "metrics": [
+      {
+        "model": "Linear regression",
+        "MAE": 803.6253768758817,
+        "RMSE": 1102.661996862701,
+        "R2": 0.6540142203549055,
+        "MAPE": 139.9776708420226
+      },
+      {
+        "model": "Ridge regression",
+        "MAE": 884.2508636970371,
+        "RMSE": 1141.618162940564,
+        "R2": 0.6291355758627308,
+        "MAPE": 144.28299186302334
+      },
+      {
+        "model": "Lasso regression",
+        "MAE": 900.1686669441206,
+        "RMSE": 1176.3572095265777,
+        "R2": 0.6062216160064269,
+        "MAPE": 142.55745574142068
+      },
+      {
+        "model": "Decision tree",
+        "MAE": 1083.328628402071,
+        "RMSE": 1307.9525001800146,
+        "R2": 0.513192365983572,
+        "MAPE": 184.71081925164071
+      },
+      {
+        "model": "Mean baseline",
+        "MAE": 2290.4127061783615,
+        "RMSE": 2560.5558481236217,
+        "R2": -0.8657005548327481,
+        "MAPE": 176.57231581833614
+      },
+      {
+        "model": "Polynomial regression",
+        "MAE": 1000.1458395644523,
+        "RMSE": 3165.228201137253,
+        "R2": -1.8509098755657876,
+        "MAPE": 126.77325055872393
+      }
+    ],
+    "top_features": [
+      {
+        "feature": "yr_1",
+        "driver_score": 1019.9841318353043
+      },
+      {
+        "feature": "yr_0",
+        "driver_score": 1019.9841318352994
+      },
+      {
+        "feature": "weathersit_3",
+        "driver_score": 1013.1761283056161
+      },
+      {
+        "feature": "mnth_1",
+        "driver_score": 796.485337718659
+      },
+      {
+        "feature": "weathersit_1",
+        "driver_score": 701.2250318674749
+      },
+      {
+        "feature": "mnth_2",
+        "driver_score": 609.573077178563
+      },
+      {
+        "feature": "atemp",
+        "driver_score": 597.7075848299971
+      },
+      {
+        "feature": "mnth_9",
+        "driver_score": 576.4144254961822
+      },
+      {
+        "feature": "season_1",
+        "driver_score": 575.2873160532121
+      },
+      {
+        "feature": "season_4",
+        "driver_score": 469.07098565387975
+      },
+      {
+        "feature": "mnth_5",
+        "driver_score": 395.1460943743676
+      },
+      {
+        "feature": "mnth_6",
+        "driver_score": 339.2588788034933
+      }
+    ]
+  }
+}
